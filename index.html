@@ -11,7 +11,7 @@
     <div class="container">
         <h1>Etch-a-Sketch</h1>
         <h3>By yumiKuri</h3>
-        <div class="screen"></div>
+        <div id="screen"></div>
         <div class="buttons">
             <button>Black</button>
             <button>White</button>
@@ -19,10 +19,8 @@
             <button>Erase</button>
             <button>Reset</button>
         </div>
-        <form action="">
-            <input type="number">
-            <button type="submit">Resize</button>
-        </form>
+        <input type="number" id="gridNum" min="1" value="16" placeholder="Enter only full number">
+        <button id="resizeBtn" type="button">Resize</button>
     </div>
 
 </body>
