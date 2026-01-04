@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2.4rem);
+    line-height: 1.2;
+}
+
+h3{
+    font-size: clamp(1.05rem, 1.05rem + 0.2vw, 1.2rem);
+    line-height: 1.35;
+}
+
+h1, h3{
+    margin: 0;
+}
+
+
+.container{
+    background-color: red;
+    margin: auto auto;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 15px;
+    width: 80vw;
+    height: 90vh;
+}
+
+.screen{
+    width: 90%;
+    height: 70%;
+    background-color: white;
+    margin: 1rem auto;
+}
+
+.buttons{
+    margin-bottom: 1rem;;
+}
