@@ -1,6 +1,7 @@
 const screen = document.getElementById("screen");
-const input = document.getElementById("gridnNum");
+const input = document.getElementById("gridNum");
 const resizeBtn = document.getElementById("resizeBtn");
+
 
 createGrid(16);
 
@@ -19,3 +20,8 @@ function createGrid(n){
     screen.style.gridTemplateColumns = `repeat(${n}, 1fr)`;
     screen.style.gridTemplateRows = `repeat(${n}, 1fr)`;
 }
+
+resizeBtn.addEventListener("click", () => {
+    createGrid(input.value);
+    input.value = "";
+});
