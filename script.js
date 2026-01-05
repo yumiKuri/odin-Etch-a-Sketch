@@ -1,6 +1,10 @@
 const screen = document.getElementById("screen");
 const input = document.getElementById("gridNum");
 const resizeBtn = document.getElementById("resizeBtn");
+const blackBtn = document.getElementById("black");
+const grayBtn = document.getElementById("gray");
+const rainbowBtn = document.getElementById("rainbow");
+const eraseBtn = document.getElementById("erase");
 let mode = "black";
 
 
@@ -42,3 +46,7 @@ screen.addEventListener("mouseover", (e) => {
         else if(mode === "erase") e.target.style.backgroundColor = "#f8f9fa";
     }
 })
+
+blackBtn.addEventListener("click", () => mode = "black");
+grayBtn.addEventListener("click", () => mode = "gray");
+rainbowBtn.addEventListener("click", () => mode = "rainbow");
