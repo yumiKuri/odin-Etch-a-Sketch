@@ -1,6 +1,7 @@
 const screen = document.getElementById("screen");
 const input = document.getElementById("gridNum");
 const resizeBtn = document.getElementById("resizeBtn");
+let mode = "black";
 
 
 createGrid(16);
@@ -21,7 +22,23 @@ function createGrid(n){
     screen.style.gridTemplateRows = `repeat(${n}, 1fr)`;
 }
 
+function randomColor(){
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 resizeBtn.addEventListener("click", () => {
     createGrid(input.value);
     input.value = "";
 });
+
+screen.addEventListener("mouseover", (e) => {
+    if(e.target.classList.contains("cells")){
+        if(mode === "black") e.target.style.backgroundColor = "black";
+        else if(mode === "rainbow") e.target.style.backgroundColor = randomColor();
+        else if(mode === "gray") e.target.style.backgroundColor = "gray";
+        else if(mode === "erase") e.target.style.backgroundColor = "#f8f9fa";
+    }
+})
