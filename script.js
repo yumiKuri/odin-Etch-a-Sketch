@@ -39,6 +39,13 @@ resizeBtn.addEventListener("click", () => {
     input.value = "";
 });
 
+document.addEventListener("keydown", (e) => {
+    if(e.key === "Enter"){
+        createGrid(input.value);
+        input.value = "";
+    }
+})
+
 screen.addEventListener("mouseover", (e) => {
     if(e.target.classList.contains("cells")){
         if(mode === "black") e.target.style.backgroundColor = "black";
