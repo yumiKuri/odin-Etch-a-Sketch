@@ -5,6 +5,7 @@ const blackBtn = document.getElementById("black");
 const grayBtn = document.getElementById("gray");
 const rainbowBtn = document.getElementById("rainbow");
 const eraseBtn = document.getElementById("erase");
+const resetBtn = document.getElementById("reset");
 let mode = "black";
 
 
@@ -50,3 +51,8 @@ screen.addEventListener("mouseover", (e) => {
 blackBtn.addEventListener("click", () => mode = "black");
 grayBtn.addEventListener("click", () => mode = "gray");
 rainbowBtn.addEventListener("click", () => mode = "rainbow");
+resetBtn.addEventListener("click", () => {
+    const grids = document.getElementsByClassName("cells");
+    const cells = Array.from(grids);
+    cells.forEach(cell => cell.style.backgroundColor = "#f8f9fa");
+})
